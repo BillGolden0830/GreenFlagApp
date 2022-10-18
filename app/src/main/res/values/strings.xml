@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GreenFlagApp</string>
+    <string name="blurb"> Green Flag customers
+        \ncan create an account to access:
+        \nCar health updates
+        \nRequest a rescue online
+        \nPolicy information
+    -</string>
+    <string name="create_account">Create An Account</string>
+    <string name="email_address">Email Address</string>
+    <string name="pass_word">Password</string>
+    <string name="confirm_pw">Confirm Password</string>
+    <string name="next">Next</string>
+    <string name="invalid_email">Invalid address. Must follow format of name@domain.com</string>
+    <string name="invalid_password">Invalid password. Must be at least 8 characters and contain 1 upper case, 1 lower case, 1 number and 1 special character</string>
+    <string name="non_match">Passwords do not match.</string>
+    <string name="instruct">Your password shouod contain \n8characters and include 1 upper\ncase, 1 lower case and 1 number.\n You can use special characters.</string>
+</resources>

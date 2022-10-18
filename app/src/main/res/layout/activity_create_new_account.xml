@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".CreateNewAccount">
+
+    <TextView
+        android:id="@+id/txtTop"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:background="#000000"
+        android:fontFamily="@font/museo_sans_500"
+        android:textSize="24dp"
+        android:text="@string/create_account"
+        android:textColor="#FFFFFF"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtMailDisp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="18dp"
+        android:background="#000000"
+        android:fontFamily="@font/museo_sans_500"
+        android:text="@string/email_address"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/edAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTop"
+        tools:text="email address" />
+    <EditText
+        android:id="@+id/edAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/museo_sans_500"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtMailDisp"
+        app:layout_constraintBottom_toTopOf="@id/tvEmailInvalid"/>
+<!--
+        android:ems="10"
+        app:layout_constraintHorizontal_bias="0.0"
+-->
+    <TextView
+        android:id="@+id/tvEmailInvalid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/invalid_email"
+        android:fontFamily="@font/museo_sans_500"
+        android:textSize="24dp"
+        android:textColor="@color/red"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/txtPass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edAddress" />
+
+
+    <TextView
+        android:id="@+id/txtPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:background="#000000"
+        android:fontFamily="@font/museo_sans_500"
+        android:text="@string/pass_word"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp"
+        tools:text="create password"
+        app:layout_constraintBottom_toTopOf="@+id/etPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmailInvalid" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        android:fontFamily="@font/museo_sans_500"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPass"
+        app:layout_constraintBottom_toTopOf="@id/txtConf"/>
+    <TextView
+        android:id="@+id/txtConf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#000000"
+        android:fontFamily="@font/museo_sans_500"
+        android:text="@string/confirm_pw"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp"
+        tools:text="reapeat password"
+        app:layout_constraintBottom_toTopOf="@+id/etConfirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+    <EditText
+        android:id="@+id/etConfirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/museo_sans_500"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtConf"
+        tools:layout_editor_absoluteY="489dp" />
+
+    <Button
+        android:id="@+id/btnConf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:padding="48dp"
+        android:text="@string/create_account"
+        android:fontFamily="@font/museo_sans_500"
+        android:textSize="24dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/gradient_button_background" />
+
+    <TextView
+        android:id="@+id/tvPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/invalid_password"
+        android:fontFamily="@font/museo_sans_500"
+        android:textSize="24dp"
+        android:textColor="@color/red"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/etConfirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+    <TextView
+        android:id="@+id/tvNoMatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/non_match"
+        android:fontFamily="@font/museo_sans_500"
+        android:textSize="24dp"
+        android:textColor="@color/red"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btnConf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etConfirm" />
+
+    <!--TextView
+        android:layout_width="match_parent"
+        android:layout_height="348dp"
+        android:background="@color/black"
+        android:fontFamily="@font/museo_sans_300"
+        android:text="@string/instruct"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@id/btnConf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etConfirm" /-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
